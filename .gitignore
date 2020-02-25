@@ -1,5 +1,4 @@
 *.pyc
-.env/*
-cdk.out/*
-.vscode/*
-node_modules/
+.env/
+.vscode/
+cdk.out/
