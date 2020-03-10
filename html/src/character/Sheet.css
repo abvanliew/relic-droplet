@@ -1,0 +1,74 @@
+.charSheet {
+
+}
+
+.attributeGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.attributeBlock {
+  margin: calc( 1vmin + 2px );
+  padding: calc( 1vmin + 2px );
+  justify-content: left;
+  display: flex;
+}
+
+.sideways {
+  writing-mode: vertical-rl;
+  transform: rotate( 180deg );
+  font-size: calc( 1vmin + 16px );
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 8px;
+}
+
+.attribList {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ability {
+  background-color: #ffeead;
+}
+
+.defense {
+  background-color: #ffcb05;
+}
+
+.resistance {
+  background-color: #f58321;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: calc( .25vmin + .5px )
+} 
+
+.attributeTitle {
+  font-weight: bold;
+  font-size: calc( .3vmin + 12px );
+  margin-bottom: 3px;
+  width: calc( .65vmin + 100px );
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.attributeValue {
+  background-color: #FFF;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 3px;
+  font-size: calc(  .4vmin + 18px );
+  height: calc(  .5vmin + 32px );
+  width: calc(  .5vmin + 32px );
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+}
