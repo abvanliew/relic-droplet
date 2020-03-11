@@ -10,7 +10,45 @@ export default class Grid extends React.Component {
             { this.props.title }
           </div>
           <div className="attributeValue">
-            { this.props.value }
+            <div className="attributeTotal">
+              { this.props.value }
+            </div>
+            <div className="attributeCalc">
+              <div className="calcSpacer calcStnd">
+                <div className="calcLabel"></div>
+                <div className="calcValue">
+                  { this.props.base }
+                </div>
+              </div>
+              <div className="calcSpacer calcThin">
+                <div className="calcLabel"></div>
+                <div className="calcValue">
+                  { this.props.base === "" ? "" : "+" }
+                </div>
+              </div>
+              <div className="calcSpacer calcStnd">
+                <div className="calcLabel">
+                  { this.props.rankTitle }
+                </div>
+                <div className="calcValue">
+                  { this.props.ranks }
+                </div>
+              </div>
+              <div className="calcSpacer calcThin">
+                <div className="calcLabel"></div>
+                <div className="calcValue">
+                  +
+                </div>
+              </div>
+              <div className="calcSpacer calcStnd">
+                <div className="calcLabel">
+                  Misc
+                </div>
+                <div className="calcValue">
+                  { this.props.misc }
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>
