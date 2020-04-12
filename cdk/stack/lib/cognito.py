@@ -16,7 +16,5 @@ class UserPool(core.Construct):
     self.pool = cognito.UserPool(
       self, "Pool",
       user_pool_name = name,
-      sign_in_type = cognito.SignInType.USERNAME,
-      username_alias_attributes = [ cognito.UserPoolAttribute.EMAIL ],
-      auto_verified_attributes = [ cognito.UserPoolAttribute.EMAIL ]
+      sign_in_aliases = cognito.SignInAliases( email = True, username = True ),
     ) 

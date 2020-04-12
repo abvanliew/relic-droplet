@@ -19,15 +19,15 @@ class StaticPublicSite(core.Construct):
     super().__init__(scope, id, **kwargs)
 
     self.wwwBucket = s3.Bucket(
-      self, "wwwBucket", 
-      access_control = s3.BucketAccessControl.PUBLIC_READ,
+      self, "Bucket", 
+      access_control = s3.BucketAccessControl.PRIVATE,
       bucket_name = bucketName,
       website_index_document = indexFile,
       website_error_document = errorFile
     )
 
     s3_deployment.BucketDeployment(
-      self, "HtmlDeployment",
+      self, "SourceDeployment",
       destination_bucket = self.wwwBucket,
       sources = [ s3_deployment.Source.asset( sourcePath ) ]
     )
@@ -39,7 +39,6 @@ class StaticPublicSite(core.Construct):
 
     self.wwwBucket.add_to_resource_policy( publicReadStatement )
 
-    core.CfnOutput( 
-      self, "S3Url",
-      value = self.wwwBucket.bucket_website_url 
-    )
+  @property
+  def getUrl( self ):
+    return self.wwwBucket.bucket_website_url

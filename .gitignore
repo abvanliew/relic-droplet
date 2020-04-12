@@ -3,3 +3,4 @@
 .vscode/
 cdk.out/
 **/node_modules
+**/build
