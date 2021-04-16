@@ -12,3 +12,5 @@ cdk.out
 
 # misc
 .DS_Store
+
+.vscode/
